@@ -8,9 +8,7 @@ const context = canvas.getContext('2d')
 
 function createSpriteLayer(sprite, pos) {
     return function drawSpriteLayer(context) {
-        for (let i = 0; i < 20; ++i) {
-            sprite.draw('idle', context, pos.x + i * 16, pos.y)
-        }
+        sprite.draw('idle', context, pos.x, pos.y)
     }
 }
 

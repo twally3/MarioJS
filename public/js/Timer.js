@@ -11,7 +11,6 @@ export default class Timer {
                 accumulatedTime -= deltaTime
             }
             this.enqueue()
-            // setTimeout(update, 1000/240, performance.now())
     
             lastTime = time
         }
@@ -19,6 +18,7 @@ export default class Timer {
 
     enqueue() {
         requestAnimationFrame(this.updateProxy)
+        // setTimeout(this.updateProxy, 1000/60, performance.now())
     }
 
     start() {

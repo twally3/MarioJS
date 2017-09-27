@@ -1,4 +1,4 @@
-import { Vec2 } from './math.js'
+import { Vec2 } from './maths.js'
 
 export default class Entity {
     constructor() {

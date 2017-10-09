@@ -5,7 +5,7 @@ export default class TileResolver {
     }
 
     toIndex(pos) {
-        return Math.floor(pos/this.tileSize)
+        return Math.floor(pos / this.tileSize)
     }
 
     toIndexRange(pos1, pos2) {

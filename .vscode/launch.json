@@ -2,10 +2,13 @@
         "version": "0.2.0",
         "configurations": [
             {
-                "type": "node",
+                "name": "Launch localhost with sourcemaps",
+                "type": "chrome",
                 "request": "launch",
-                "name": "Launch Program",
-                "program": "${file}"
+                "url": "http://localhost:5000",
+                "sourceMaps": true,
+                "webRoot": "${workspaceRoot}/public",
+                "userDataDir": false
             }
         ]
     }

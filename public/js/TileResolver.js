@@ -9,7 +9,7 @@ export default class TileResolver {
     }
 
     toIndexRange(pos1, pos2) {
-        const pMax = Math.ceil((pos2 / this.tileSize) * this.tileSize)
+        const pMax = Math.ceil(pos2 / this.tileSize) * this.tileSize
         const range = []
         let pos = pos1
 

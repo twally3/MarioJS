@@ -1,5 +1,7 @@
 import Entity, { Trait } from '../Entity.js'
 import Jump from "../traits/Jump.js"
+import Stomper from "../traits/Stomper.js"
+import Killable from "../traits/Killable.js"
 import Go from "../traits/Go.js"
 import { loadSpriteSheet } from '../loaders.js'
 import { createAnim } from '../anim.js'
@@ -43,6 +45,10 @@ function createMarioFactory(sprite) {
     
         mario.addTrait(new Go())   
         mario.addTrait(new Jump())
+        mario.addTrait(new Stomper())
+        mario.addTrait(new Killable())
+
+        mario.killable.removeAfter = 0
         
         mario.turbo = setTurboState
         mario.draw = drawMario

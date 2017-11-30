@@ -41,6 +41,8 @@ export default class Level {
             }
         })
 
+        this.entities.forEach(entity => entity.finalise() )
+
         this.totalTime += deltaTime
     }
 }

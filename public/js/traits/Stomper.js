@@ -5,6 +5,9 @@ export default class Stomper extends Trait {
         super('stomper')
 
         this.bounceSpeed = 400
+
+        this.onStomp = function() {
+        }
     }
 
     bounce(us, them) {
@@ -20,6 +23,7 @@ export default class Stomper extends Trait {
 
         if (them.vel.y < us.vel.y) {
             this.bounce(us, them)
+            this.onStomp(us, them)
         }
     }
 }
